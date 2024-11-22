@@ -5,7 +5,7 @@ async function testGestionRH() {
 
     try {
         // Charger l'application
-        await driver.get('file:///<CHEMIN_ABSOLU_VERS_INDEX.HTML>');
+        await driver.get('http://localhost:8081');
 
         // Test Ajouter un employé
         await driver.findElement(By.id('ajout-nom')).sendKeys('Bernard');
