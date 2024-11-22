@@ -45,3 +45,13 @@ function supprimerEmployeManuel() {
         afficherEmployes();
     }
 }
+
+// Fonction pour modifier une fiche employé
+function modifierEmploye(id, nom, poste) {
+    const employe = employes.find(emp => emp.id === id);
+    if (employe) {
+        employe.nom = nom || employe.nom;
+        employe.poste = poste || employe.poste;
+    }
+}
+module.exports = { employes, ajouterEmploye, supprimerEmploye, modifierEmploye };
